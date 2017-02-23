@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestProgressViewSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ces-sv-RP3" customClass="SSProgressView" customModule="TestProgressViewSwift" customModuleProvider="target">
+                                <rect key="frame" x="175" y="28" width="250" height="250"/>
+                                <color key="backgroundColor" red="0.1764705882" green="0.63921568630000003" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="3AL-BF-luw"/>
+                                    <constraint firstAttribute="width" constant="250" id="lxd-rq-kD9"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVV-s1-aci">
+                                <rect key="frame" x="256" y="311" width="89" height="38"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="22"/>
+                                <state key="normal" title="Download">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="downloadBtnActn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yho-t5-e1Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12934509220000001" green="0.56653839880000001" blue="0.77022174870000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ces-sv-RP3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="KH1-mQ-P4y"/>
+                            <constraint firstItem="jVV-s1-aci" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SOH-Fk-TUO"/>
+                            <constraint firstItem="jVV-s1-aci" firstAttribute="top" secondItem="Ces-sv-RP3" secondAttribute="bottom" constant="33" id="YSS-w0-lmR"/>
+                            <constraint firstItem="Ces-sv-RP3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j3j-Uy-g7p"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="download" destination="jVV-s1-aci" id="I2v-KZ-c4M"/>
+                        <outlet property="ssProgressView" destination="Ces-sv-RP3" id="bZT-QM-MfM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="299" y="429"/>
+        </scene>
+    </scenes>
+</document>
